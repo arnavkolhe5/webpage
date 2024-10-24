@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Selection and BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Calorie Counter and BMI Calculator</h1>
+    </header>
+    <main>
+        <h2>Select Food Items</h2>
+        <form id="foodForm" onsubmit="return calculateCalories()">
+            <label for="food">Select Food:</label>
+            <select id="food" name="food">
+                <option value="roti">Roti (100 calories)</option>
+                <option value="paneer">Paneer (250 calories)</option>
+                <option value="dal">Dal (150 calories)</option>
+                <option value="rice">Rice (130 calories)</option>
+                <option value="vegetable">Mixed Vegetable (80 calories)</option>
+                <option value="curd">Curd (100 calories)</option>
+                <option value="salad">Salad (50 calories)</option>
+                <option value="sweet">Sweets (200 calories)</option>
+                <option value="chicken_curry">Chicken Curry (300 calories)</option>
+                <option value="mutton_curry">Mutton Curry (400 calories)</option>
+                <option value="fish_fry">Fish Fry (250 calories)</option>
+                <option value="biryani">Biryani (500 calories)</option>
+                <option value="pizza">Pizza (285 calories per slice)</option>
+                <option value="burger">Burger (500 calories)</option>
+                <option value="fries">French Fries (365 calories)</option>
+                <option value="pasta">Pasta (200 calories)</option>
+                <option value="samosa">Samosa (150 calories)</option>
+            </select>
+            <input type="submit" value="Add Food">
+        </form>
+        <h2>Total Calories Consumed: <span id="totalCalories">0</span></h2>
+        <ul id="foodList"></ul>
+
+        <h2>BMI Calculator</h2>
+        <form id="bmiForm" onsubmit="return calculateBMI()">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height" required>
+            <input type="submit" value="Calculate BMI">
+        </form>
+        <h3>Your BMI: <span id="bmiResult">0</span></h3>
+
+        <!-- BMI Scale Image -->
+        <h2>BMI Scale</h2>
+        <img src="bmi_scale.png" alt="BMI Scale" style="max-width: 100%; height: auto;">
+    </main>
+    <footer>
+        <p>© 2024 Your Healthy Space</p>
+    </footer>
+</body>
+</html>
